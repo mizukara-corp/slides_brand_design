@@ -1,0 +1,8 @@
+# Python
+scripts/__pycache__/
+scripts/*.pyc
+**/*.pyc
+
+# Office 一時ファイル
+assets/~$*
+~$*
