@@ -1,0 +1,30 @@
+# 生成物（スライド・ドキュメント）
+*.pptx
+*.pdf
+*.docx
+*.xlsx
+
+# Claude Code worktree（ローカル作業用）
+.claude/worktrees/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# ログ・一時ファイル
+*.log
+tmp/
