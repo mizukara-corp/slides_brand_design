@@ -15,6 +15,14 @@ closing_ja: "ありがとうございました"
 slides:
   # ── ベーステンプレート ──────────────────────────
 
+  # title: ダーク・JCCロゴ付き中央タイトル
+  #   day だけ: "DAY 1 -" 形式（短文・箇条書きスタイル）
+  #   title_text: 任意の長いセミナータイトル（箇条書き「-」なし、横幅全幅）
+  #   subtitle: title_text と組み合わせて使う小さめのサブタイトル（任意）
+  - type: title
+    title_text: "実践！コーチング・スキル向上セミナー"
+    subtitle: "～相手の可能性を引き出し、行動を促す技術～"
+
   - type: section
     title_en: "Section Title"
     title_ja: "セクション日本語タイトル"
