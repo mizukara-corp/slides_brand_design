@@ -7,6 +7,9 @@
 # Claude Code worktree（ローカル作業用）
 .claude/worktrees/
 
+# Claude Code スキルバンドル（パッケージ化された配布物・ソースは .claude/skills/ にある）
+*.skill
+
 # OS
 .DS_Store
 Thumbs.db
