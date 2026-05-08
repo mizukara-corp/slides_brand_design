@@ -331,6 +331,55 @@ def set_shape_text(shape, new_text):
 
 
 # ──────────────────────────────────────────────
+# title スライド：セミナー形式（title_text + subtitle）
+# ──────────────────────────────────────────────
+def apply_seminar_title(slide, title_text, subtitle=None):
+    """title スライドのテキストシェイプを書き換えて、長いセミナータイトルに対応する。
+    - 箇条書き「-」を削除
+    - 横幅をスライド全幅に広げて中央寄せ
+    - title_text（大）+ subtitle（小・任意）を表示
+    """
+    from pptx.util import Inches
+    text_shapes = get_text_shapes(slide)
+    if not text_shapes:
+        return
+    shape = text_shapes[0]
+
+    # 横幅をスライド全幅に広げて中央寄せ（スライド幅は presentation 側に依存：10" or 13.33"）
+    slide_width_emu = slide.part.package.presentation_part.presentation.slide_width
+    margin = Inches(0.25)
+    shape.left = margin
+    shape.width = slide_width_emu - margin * 2
+    # top・height はテンプレート（auto-fit）のまま
+
+    tf = shape.text_frame
+    txBody = tf._txBody
+
+    # 既存段落をすべて削除
+    for p in list(txBody.findall(f"{{{NS_A}}}p")):
+        txBody.remove(p)
+
+    def _make_para(text, size_pt, bold):
+        p = etree.SubElement(txBody, f"{{{NS_A}}}p")
+        pPr = etree.SubElement(p, f"{{{NS_A}}}pPr")
+        pPr.set("algn", "ctr")
+        r = etree.SubElement(p, f"{{{NS_A}}}r")
+        rPr = etree.SubElement(r, f"{{{NS_A}}}rPr")
+        rPr.set("b", "1" if bold else "0")
+        rPr.set("lang", "ja")
+        rPr.set("sz", str(size_pt * 100))
+        fill = etree.SubElement(rPr, f"{{{NS_A}}}solidFill")
+        sc = etree.SubElement(fill, f"{{{NS_A}}}schemeClr")
+        sc.set("val", "lt1")
+        t = etree.SubElement(r, f"{{{NS_A}}}t")
+        t.text = str(text)
+
+    _make_para(title_text, size_pt=28, bold=True)
+    if subtitle:
+        _make_para(subtitle, size_pt=14, bold=False)
+
+
+# ──────────────────────────────────────────────
 # テーブルスライドの行データを差し替える
 # ──────────────────────────────────────────────
 def set_table_data(slide, rows_data):
@@ -500,6 +549,15 @@ def process_slide(prs, slide_spec):
 
     template_idx = TEMPLATE_MAP[slide_type]
     new_slide = duplicate_slide(prs, template_idx)
+
+    # ── title タイプ：title_text 指定時はセミナー形式に書き換える ──
+    if slide_type == "title" and slide_spec.get("title_text") is not None:
+        apply_seminar_title(
+            new_slide,
+            slide_spec.get("title_text"),
+            slide_spec.get("subtitle"),
+        )
+        return new_slide
 
     slot_map = SLOT_MAP.get(slide_type, {})
     text_shapes = get_text_shapes(new_slide)

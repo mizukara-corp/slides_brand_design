@@ -12,6 +12,9 @@ description: >
 TEMPLATE.pptx（34枚）をテンプレートとして新しいPPTXを生成するスキル。  
 背景・ロゴ・フォント・カラーはすべて元資料を引き継ぐ。著作権表示は自動的に © 2026 に統一される。
 
+> 👉 **エンドユーザー向け使い方マニュアル**: [docs/manual.md](docs/manual.md)  
+> 👉 **フロー図（mermaid）**: [docs/FLOW.md](docs/FLOW.md)
+
 ```python
 # 以降 {SKILL_DIR} は下記パスを指す（コードブロック内でそのまま使う）
 SKILL_DIR = "/sessions/stoic-modest-hamilton/mnt/03_Create_slide/.claude/skills/jcc-slides"
@@ -28,7 +31,7 @@ SKILL_DIR = "/sessions/stoic-modest-hamilton/mnt/03_Create_slide/.claude/skills/
 
 | type | 見た目 | 必須フィールド | 任意 |
 |------|--------|----------------|------|
-| `title` | ダーク・中央タイトル | `day` | — |
+| `title` | ダーク・JCCロゴ付き中央タイトル | `day` *or* `title_text` | `subtitle`（`title_text`時のみ） |
 | `section` | ダーク・大見出し（2行） | `title_en` | `title_ja` |
 | `content_list` | ダーク・左タイトル＋箇条書き | `section_label`, `body` | `subtitle`, `footnote` |
 | `card2_dark` | ダーク・2カラムカード（枠） | `title`, `card1`, `card2` | — |
