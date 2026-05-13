@@ -1,4 +1,4 @@
-# org-coaching 使い方マニュアル
+# org-coaching-slides 使い方マニュアル
 
 組織コーチング（MIZUKARA ブランド）の PPTX スライドを Claude Code で自動生成するスキルです。
 `training3.pptx`（DAY1 新ブランド・ベースデザイン）と `training2.pptx`（図解スライド）から作った
@@ -20,7 +20,7 @@ TEMPLATE.pptx（20 枚）のデザインをそのまま引き継いで、テキ�
 Claude Code のチャットで以下のいずれかをタイプ：
 
 ```
-/org-coaching
+/org-coaching-slides
 ```
 
 または通常の依頼文でも OK：
@@ -53,7 +53,7 @@ Claude Code のチャットで以下のいずれかをタイプ：
 ## 4. もっとも速い使い方（状態 4 / 直接生成）
 
 ```
-/org-coaching
+/org-coaching-slides
 
 以下の内容で DAY1 のスライドを作って：
 
@@ -205,7 +205,7 @@ Claude が内容を解釈して、**最適なスライドタイプを自動選�
 ## 11. 例：DAY1 講義デッキを作る
 
 ```
-/org-coaching
+/org-coaching-slides
 
 DAY1 用に組織コーチング研修のスライドを 20 枚で作って
 

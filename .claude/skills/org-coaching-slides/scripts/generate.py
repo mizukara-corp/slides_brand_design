@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-org-coaching 生成スクリプト
+org-coaching-slides 生成スクリプト
 TEMPLATE.pptx（20枚）をテンプレートとして、YAMLアウトラインから PPTX を生成する。
 
 使い方:
@@ -477,7 +477,7 @@ def apply_bookend(outline):
 # メイン
 # ──────────────────────────────────────────────
 def main():
-    parser = argparse.ArgumentParser(description="org-coaching スライド生成")
+    parser = argparse.ArgumentParser(description="org-coaching-slides スライド生成")
     parser.add_argument("yaml_path", help="入力YAML")
     parser.add_argument("output_path", help="出力PPTX")
     parser.add_argument("--template", default=None, help="テンプレートPPTXのパス")

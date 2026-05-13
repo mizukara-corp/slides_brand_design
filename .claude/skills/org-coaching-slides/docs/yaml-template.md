@@ -1,4 +1,4 @@
-# org-coaching YAML テンプレート集
+# org-coaching-slides YAML テンプレート集
 
 `/tmp/outline.yaml` に書き出して `scripts/generate.py` に渡すための、
 全スライドタイプのサンプルとフィールド一覧。

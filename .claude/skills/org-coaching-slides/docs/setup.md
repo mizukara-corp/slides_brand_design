@@ -1,4 +1,4 @@
-# org-coaching セットアップ
+# org-coaching-slides セットアップ
 
 ## 必要パッケージ
 
@@ -17,7 +17,7 @@ brew install poppler
 ## 動作確認
 
 ```bash
-SD="/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching"
+SD="/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching-slides"
 
 # サンプル YAML で生成
 python3 "$SD/scripts/generate.py" "$SD/docs/sample_outline.yaml" /tmp/output.pptx
