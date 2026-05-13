@@ -1,0 +1,119 @@
+# org-coaching サンプル outline.yaml
+# 本ファイルは scripts/generate.py へそのまま渡せる動作確認用デッキ。
+
+day: "DAY 1 -"
+title_en: "Organizational\nCoaching"
+title_ja: "組織コーチング"
+closing_message: "本日もありがとうございました"
+
+slides:
+  - type: meditation
+
+  - type: leader_message
+
+  - type: check_in
+    main_text: "今この瞬間、感じていることは何ですか？"
+
+  - type: purpose
+    main_text: |-
+      組織の全員が原理原則に則った GOAL 設定を心から合意し、
+      オーナーシップを獲得している状態を共に創る
+
+  - type: agenda
+    highlight: 0
+    items:
+      - 脳のカラクリを理解する
+      - ブレイクスルー領域を特定する
+      - GOAL 達成し続ける組織を編成する
+
+  - type: agenda
+    highlight: 1
+    items:
+      - 脳のカラクリを理解する
+      - ブレイクスルー領域を特定する
+      - GOAL 達成し続ける組織を編成する
+
+  - type: question
+    main_text: |-
+      変わり続ける人と変わらない人の
+      決定的な違いは何ですか？
+
+  - type: fillable
+    name: result_chain
+    title: "結果を作る原理原則"
+    box1: "結果"
+    box2: "行動"
+    box3: "感情"
+    box4: "信念・価値観"
+
+  - type: fillable
+    name: compare_2card
+    title: "技術課題と適応課題"
+    card1: |-
+      技術課題（DO）
+      ある課題に対して
+      新たな知識やスキルを
+      身につけることにより
+      対応できる課題のこと
+    card2: |-
+      適応課題（BE）
+      自分や組織の価値観や
+      考え方に根ざしており
+      価値観の変容が
+      求められる課題のこと
+
+  - type: key_point
+    main_text: |-
+      自分が獲得したい「成果」や「GOAL」は
+      自ら機会をつくり獲得する
+
+  - type: fillable
+    name: loop_learning
+    circle1: "前提"
+    circle2: "行動"
+    circle3: "結果"
+    badge1: "改革"
+    badge2: "改善"
+    label1: "シングルループ学習"
+    label2: "ダブルループ学習"
+
+  - type: section_divider
+    title: "合意の意思決定モデル"
+
+  - type: fillable
+    name: compare_3card
+    card1_label: "　一致　"
+    card1_body: |-
+      一人一人の意志と
+      表現する言葉が
+      一語一句ピタッと
+      揃っている状態。
+    card2_label: "　合意　"
+    card2_body: |-
+      意思を合わせること。
+      複数の意思が
+      理由と理解を通じて
+      "納得点"に
+      収束する状態。
+    card3_label: "　了解　"
+    card3_body: |-
+      自分の意志は関係なく
+      相手の内容・意図を
+      理解し受け取った状態。
+
+  - type: fillable
+    name: circle_overlap
+    title: "一致・合意・了解の区別"
+    main_label: "\n組織\nGOAL"
+    sub1: "一致"
+    sub2: "合意"
+    sub3: "了解"
+
+  - type: rest_time
+
+  - type: notice
+    title: "DAY2の告知"
+    items:
+      - "①  脳のカラクリを理解する"
+      - "②  ブレイクスルー領域を特定する"
+      - "③  GOAL達成し続ける組織を編成する"
