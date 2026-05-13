@@ -1,4 +1,4 @@
-# org-coaching スキル フロー解説
+# org-coaching-slides スキル フロー解説
 
 組織コーチング（MIZUKARA ブランド）の PPTX スライドをテキスト入力から自動生成するスキルの処理フローを説明します。
 
@@ -274,7 +274,7 @@ flowchart LR
 ## ファイル構成
 
 ```
-.claude/skills/org-coaching/
+.claude/skills/org-coaching-slides/
 ├── SKILL.md                  # スキル本体（フロー分岐・STEP定義）
 ├── assets/
 │   ├── TEMPLATE.pptx         # デザインテンプレート（20枚）

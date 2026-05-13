@@ -1,15 +1,15 @@
 ---
-name: org-coaching
+name: org-coaching-slides
 description: >
   組織コーチング（MIZUKARA ブランド）の PPTX スライドをテキスト入力から自動生成するスキル。
   training3.pptx（DAY1 新ブランド・ベースデザイン）と training2.pptx（図解スライド）から作った
   TEMPLATE.pptx（20 枚：base 6 + 編集可 9 + fillable 5）のデザインを完全に踏襲する。
   「組織コーチングのスライドを作って」「DAY1 の研修資料を作りたい」「組織GOAL合意モデルのスライドにして」
-  「キャリスピのスライドを作って」などのリクエストで使う。
+  などのリクエストで使う。
   YAML アウトラインさえ渡せば完成まで一気通貫で行う。
 ---
 
-# org-coaching スキル
+# org-coaching-slides スキル
 
 組織コーチング研修用 PPTX を生成するスキル。  
 ブランドカラー（ダークネイビー＋オレンジグラデ）・ロゴ・フォント・各図解のレイアウトは
@@ -20,7 +20,7 @@ description: >
 
 ```python
 # 以降 {SKILL_DIR} は下記パスを指す（コードブロック内でそのまま使う）
-SKILL_DIR = "/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching"
+SKILL_DIR = "/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching-slides"
 ```
 
 **スキル起動後の最初のアクションは必ず [ユーザー状態の検出（4 段階）](#user-state) から始めること。**  
@@ -217,7 +217,7 @@ Read(f"{SKILL_DIR}/docs/yaml-template.md")
 ### STEP 3：スクリプトを実行する
 
 ```bash
-SD="/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching"
+SD="/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching-slides"
 python3 "$SD/scripts/generate.py" /tmp/outline.yaml /tmp/output.pptx
 ```
 

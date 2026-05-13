@@ -40,7 +40,7 @@ slides:
 3. 差分のみの PPTX を生成：
 
 ```bash
-SD="/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching"
+SD="/Users/yutakondo/Projects/work/06_design/04_Create_slide/.claude/skills/org-coaching-slides"
 python3 "$SD/scripts/generate.py" /tmp/patch_outline.yaml /tmp/patch_output.pptx
 ```
 
